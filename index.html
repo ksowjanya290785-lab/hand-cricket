@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HandCricket.xyz - a quick two-innings hand cricket game.">
+  <meta name="application-name" content="HandCricket.xyz">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none';">
+  <title>HandCricket.xyz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="hero">
+      <p class="eyebrow">HANDCRICKET.XYZ / QUICK MATCH</p>
+      <h1>HandCricket.xyz</h1>
+      <p class="subtitle">Pick a number. Match the opponent to take the wicket.</p>
+    </header>
+
+    <section class="scoreboard" aria-label="Scoreboard">
+      <div class="score-card player-score">
+        <span class="score-label">YOU</span>
+        <strong id="user-score">0</strong>
+      </div>
+      <div class="score-divider">VS</div>
+      <div class="score-card computer-score">
+        <span class="score-label">COMPUTER</span>
+        <strong id="computer-score">0</strong>
+      </div>
+      <p id="target-label" class="target-label">Innings 1 of 2</p>
+    </section>
+
+    <section class="play-area">
+      <div class="status-row">
+        <span id="phase-badge" class="phase-badge">TOSS</span>
+        <p id="status" aria-live="polite">Choose heads or tails to begin the toss.</p>
+      </div>
+      <p id="last-play" class="last-play">No ball played yet</p>
+
+      <div id="toss-controls" class="controls">
+          <button type="button" class="action-button" data-toss="heads">Heads</button>
+          <button type="button" class="action-button" data-toss="tails">Tails</button>
+      </div>
+
+      <div id="choice-controls" class="controls hidden">
+          <button type="button" class="action-button" data-choice="bat">Bat First</button>
+          <button type="button" class="action-button" data-choice="bowl">Bowl First</button>
+      </div>
+
+      <div id="number-controls" class="number-section hidden">
+        <p class="move-label">YOUR MOVE</p>
+        <div class="number-grid" aria-label="Choose a number from 1 to 10">
+          <button type="button" class="number-button" data-number="1">1</button>
+          <button type="button" class="number-button" data-number="2">2</button>
+          <button type="button" class="number-button" data-number="3">3</button>
+          <button type="button" class="number-button" data-number="4">4</button>
+          <button type="button" class="number-button" data-number="5">5</button>
+          <button type="button" class="number-button" data-number="6">6</button>
+          <button type="button" class="number-button" data-number="7">7</button>
+          <button type="button" class="number-button" data-number="8">8</button>
+          <button type="button" class="number-button" data-number="9">9</button>
+          <button type="button" class="number-button" data-number="10">10</button>
+        </div>
+      </div>
+
+      <button type="button" id="new-match" class="reset-button">New Match</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
